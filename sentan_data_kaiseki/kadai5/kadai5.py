@@ -33,6 +33,8 @@ def load_dataset():
   n_test_samples = n_test_class_samples * n_labels
   image_size = 256
   
+  x_train = x_train.transpose(2, 1, 0)
+  x_test = x_test.transpose(2, 1, 0)
   x_train = x_train.reshape(n_train_samples, image_size)
   x_test = x_test.reshape(n_test_samples, image_size)
 
